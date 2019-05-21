@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <student name="Alex" age="27"/>
+  <student name="Valera" age="17"/>
+  <student name="Valera2" age="13"/>
+</root>
