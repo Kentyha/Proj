@@ -4,32 +4,24 @@ using System.Runtime.Serialization.XmlObjectSerializer;
 
 namespace Proj
 {
-    class Program
-    {
-        string jsonPath;
+        class Program
+        {           
+        static int factorial(int i)
+        {
+            int result;
+
+            if (i == 1)
+                return 1;
+            result = factorial(i - 1) * i;
+            return result;
+        }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hi guys!");
+            System.Console.WriteLine("Shehurin");
 
-            jsonPath = @"..\..\Students.json";
-            List<Student> ls = new List<Student>();
-            Student p1 = new Student()
-            {
-                Name = "Taras",
-                Age = 12
-            };
-            ls.Add(p1);
-            StreamWriter ms = new StreamWriter(jsonPath);
-            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(List<Student>));
-            ser.WriteObject(ms, ls);
         }
     }
-    [DataContract]
-    class Student
-    {
-        [DataMember]
-        public string Name {get;set;}
-        [DataMember]
-        public int Age {get;set;}
-    }
+
 }
